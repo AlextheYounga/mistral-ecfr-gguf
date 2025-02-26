@@ -9,5 +9,8 @@ mkdir -p lib/llama.cpp
 cd lib/llama.cpp
 
 
-cmake -B build -DGGML_CUDA=ON # CUDA for NVIDIA GPU. MacOS Metal is on by default
+# CPU is default.
+# MacOS Metal GPU support is on by default.
+# For CUDA support, you may want to download from a stable release, because building for CUDA seems error prone. (-DGGML_CUDA=ON)
+cmake -B build 
 cmake --build build --config Release

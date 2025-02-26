@@ -28,8 +28,10 @@ I am making this 100 epochs model available [here](https://huggingface.co/alexth
 
 ### Getting Started
 ```sh
+# Move into workspace
 cd workspace
 
+# Install Python packages
 pip install -r requirements.txt
 
 # Download the LLama.CPP library for creating and communicating with GGUF models
@@ -39,8 +41,9 @@ pip install -r requirements.txt
 
 ## Chatting with Model
 1. Place model in a folder called models
-2. Ensure that you have run the `download_llama_cpp` script from the last step
-3. Run `./scripts/chat mistral-lora-cfr-checkpoint-100.gguf`
+2. Ensure that you have run the `download_llama_cpp` script from the last step\
+3. Download the model from [HuggingFace](https://huggingface.co/alextheyounger/Mistral7b-eCFR) and place in `./models` folder in root.
+4. Run `./scripts/chat mistral-lora-cfr-checkpoint-100.gguf`
 
 
 ## Creating GGUFs from Models
