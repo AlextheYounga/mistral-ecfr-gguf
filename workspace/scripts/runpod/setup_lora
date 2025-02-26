@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# When training LORA, sometimes we get some weird errors from our pip package versions.
+# This seems to correct those version issues
+pip uninstall -y bitsandbytes triton
+pip install bitsandbytes "triton==2.1.0" --no-cache-dir
+pip install --upgrade typing_extensions 

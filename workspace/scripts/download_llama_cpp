@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Run from workspace dir
+# Download the llama.cpp library and build it
+
+cd ..
+git clone https://github.com/ggml-org/llama.cpp.git lib/llama.cpp
+mkdir -p lib/llama.cpp
+cd lib/llama.cpp
+
+
+cmake -B build -DGGML_CUDA=ON # CUDA for NVIDIA GPU. MacOS Metal is on by default
+cmake --build build --config Release

@@ -1,0 +1,19 @@
+#!/bin/bash
+# Run from workspace dir
+
+# Change these paths to full paths, I never got around to making this script smarter
+MODEL_PATH="complete/path/to/models"
+OUTFILE="./out/mistral-lora-cfr.gguf"
+MODEL_NAME=mistral-lora-cfr
+
+mkdir -p ../out
+cd ../lib/llama.cpp
+echo "Creating python venv for llama.cpp so we don't mess with the workspace python"
+python -m venv venv
+source venv/bin/activate
+
+echo "Installing pip requirements"
+pip install -r requirements.txt
+
+
+python convert_hf_to_gguf.py $MODEL_PATH --outfile=$OUTFILE --model-name=$MODEL_NAME

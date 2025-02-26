@@ -1,0 +1,1 @@
+These are scripts which I use to decrease uptime on Runpods for more efficient training

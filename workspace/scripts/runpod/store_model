@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# After downloading models from HuggingFace, I store them in the workspace directory.
+rsync -avP /root/.cache/huggingface /workspace/hf/

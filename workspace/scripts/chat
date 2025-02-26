@@ -1,0 +1,13 @@
+#!/bin/bash
+# Run from workspace dir
+
+# Spin up a chat with a gguf file using the llama-cli
+# Example usage ./scripts/chat mistral-lora-cr-checkpoint-60.gguf
+
+# Get full path of the model file
+MODELFILE=$(realpath ../models/$1)
+
+cd ../lib/llama.cpp/build/bin
+
+# Offload work to the gpu with the --n-gpu-layers flag
+./llama-cli -m $MODELFILE --n-gpu-layers 33

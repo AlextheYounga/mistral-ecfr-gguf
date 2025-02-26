@@ -1,0 +1,24 @@
+#!/bin/bash
+# Run from workspace dir
+
+# Runpod starts with the pod relatively empty, so we need to install some basic tools
+
+apt update
+apt install rsync -y
+apt install nano -y
+apt install tmux -y
+apt install zip -y
+apt install unzip -y
+apt install tree -y
+
+# Before closing out the pod, I store the models downloaded from HuggingFace in the workspace directory.
+# This way, the models are saved and can be used in future pods.
+if [ -d "/workspace/hf" ] && [ "$(ls -A /workspace/hf)" ]; then
+	echo "Models directory is not empty. Moving files to HuggingFace."
+	rsync -avP /workspace/hf/huggingface /root/.cache/
+fi
+
+pip install -r requirements.txt
+
+# Huggingface login
+huggingface-cli login
