@@ -72,7 +72,7 @@ This part is issued by the Office...
 ```
 
 ## Chat 3 - Light Lora Training 100 epochs
-> Closer but still incorrect information
+> Interesting, and this is pulling actual quotes from other sections of the eCFR, (regarding the Office of Management and Budget's) but still not the data I asked for.
 ```
 Prompt: Recite Title 1 Section 1.1 of the eCFR
  Title 1 of the Electronic Code of Federal Regulations (eCFR) is titled "General Provisions" and contains the following content for Section 1.1:

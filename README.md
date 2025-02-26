@@ -17,7 +17,7 @@ Here are my training attempts and their outcomes:
 - Full Fine Tune = catastrophic overfitting, massive forgetfulness
 - Light Lora Training:
   - 60 steps = Incorrect information and generally ignorant of the code
-  - 100 epochs = Closer, and did start reciting other sections from memory, but not quite the section asked for.
+  - 100 epochs = **Interesting, and did start reciting other sections from memory, but not quite the section asked for.**
   - 200 epochs = Unstable, catastraphic forgetfulness, incoherent outputs.
 
 See [Notes](./notes.md) for full output
