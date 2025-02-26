@@ -5,13 +5,13 @@ This was an experiment for getting a simple Mistral model trained on the eCFR.
 
 There may be some promise here, but I am moving on to other projects for the time being. I spent one week on this, I am sure that more time on this could eventually turn into some fruitful. 
 
-There is also certainly good reason to try this, as not even ChatGPT is trained on the eCFR. It can only list the titles from memory and not much else.
+There is also certainly good reason to try this, as not even ChatGPT is trained on the eCFR. ChatGPT can only list the titles from memory and not much else. It can obviously search the internet to find the sections that you request, but it doesn't know enough specifics about the code to find things that others might have missed. 
 
 The ideal outcome was to be able to create a small gguf model that can run on the CPU that was "good-enough" to use alongside a RAG system, or use as a quick reference for combing through the monster of the Code of Federal Regulations.
 
 At the very least, I have created a great foundation for further research here. I have also included some helpful Runpod scripts for quick training on their remote GPUs. 
 
-You can find the full training data [here](https://drive.proton.me/urls/VCV61T2R9M#V27jHni5kDmI)
+You can find the full eCFR training data [here](https://drive.proton.me/urls/VCV61T2R9M#V27jHni5kDmI)
 
 Here are my training attempts and their outcomes:
 - Full Fine Tune = catastrophic overfitting, massive forgetfulness
